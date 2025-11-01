@@ -1,0 +1,20 @@
+[01-Nov-2025 18:32:28 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\open-mysql\htdocs\test.php:101
+Stack trace:
+#0 D:\open-mysql\htdocs\test.php(101): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), '', 3306)
+#1 D:\open-mysql\router.php(63): require('D:\\open-mysql\\h...')
+#2 {main}
+  thrown in D:\open-mysql\htdocs\test.php on line 101
+[01-Nov-2025 18:36:17 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\open-mysql\Open_MySql\htdocs\test.php:101
+Stack trace:
+#0 D:\open-mysql\Open_MySql\htdocs\test.php(101): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), '', 3306)
+#1 {main}
+  thrown in D:\open-mysql\Open_MySql\htdocs\test.php on line 101
+[01-Nov-2025 18:38:35 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\open-mysql\Open_MySql\htdocs\test.php:101
+Stack trace:
+#0 D:\open-mysql\Open_MySql\htdocs\test.php(101): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), '', 3306)
+#1 {main}
+  thrown in D:\open-mysql\Open_MySql\htdocs\test.php on line 101
+[01-Nov-2025 18:38:39 Europe/Berlin] PHP Warning:  session_start(): open(tmp\sess_u5lu7st8vdeu99tkke5pv4in2n, O_RDWR) failed: No such file or directory (2) in D:\open-mysql\Open_MySql\htdocs\welcome.php on line 2
+[01-Nov-2025 18:38:39 Europe/Berlin] PHP Warning:  session_start(): Failed to read session data: files (path: tmp) in D:\open-mysql\Open_MySql\htdocs\welcome.php on line 2
+[01-Nov-2025 18:39:35 Europe/Berlin] PHP Warning:  session_start(): open(tmp\sess_u5lu7st8vdeu99tkke5pv4in2n, O_RDWR) failed: No such file or directory (2) in D:\open-mysql\Open_MySql\htdocs\login.php on line 3
+[01-Nov-2025 18:39:35 Europe/Berlin] PHP Warning:  session_start(): Failed to read session data: files (path: tmp) in D:\open-mysql\Open_MySql\htdocs\login.php on line 3

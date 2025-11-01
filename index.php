@@ -67,7 +67,7 @@
         
         .actions {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 40px;
         }
@@ -191,6 +191,10 @@
             <a href="/myadmin" class="action-btn">
                 <span>🗄️</span>
                 <span>Mở phpMyAdmin</span>
+            </a>
+            <a href="/htdocs/test.php" class="action-btn secondary">
+                <span>🧪</span>
+                <span>Test PHP (htdocs)</span>
             </a>
             <a href="https://github.com/thanhtuanxzx/Open_MySql" target="_blank" class="action-btn secondary">
                 <span>⭐</span>
