@@ -192,6 +192,6 @@ yield _gettext("Git information missing!");
 
     public function getSourceContext()
     {
-        return new Source("", "footer.twig", "D:\\thu\\MySQL\\phpMyAdmin-5.2.3-all-languages\\templates\\footer.twig");
+        return new Source("", "footer.twig", "D:\\open-mysql\\Open_MySql\\phpMyAdmin-5.2.3-all-languages\\templates\\footer.twig");
     }
 }
