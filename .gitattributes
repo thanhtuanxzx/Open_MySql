@@ -1,0 +1,4 @@
+MySQL[[:space:]]Server[[:space:]]9.5/lib/*.dll filter=lfs diff=lfs merge=lfs -text
+MySQL[[:space:]]Server[[:space:]]9.5/bin/*.exe filter=lfs diff=lfs merge=lfs -text
+MySQL[[:space:]]Server[[:space:]]9.5/bin/*.dll filter=lfs diff=lfs merge=lfs -text
+MySQL[[:space:]]Server[[:space:]]9.5/lib/*.lib filter=lfs diff=lfs merge=lfs -text

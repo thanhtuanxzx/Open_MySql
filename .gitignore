@@ -1,13 +1,6 @@
-# MySQL Server files (too large for GitHub)
-MySQL Server 9.5/bin/mysqld.exe
-MySQL Server 9.5/lib/mysqlclient.lib
-MySQL Server 9.5/lib/libjitexecutor.dll
-
-# MySQL Server bin và lib (chứa nhiều file lớn)
-MySQL Server 9.5/bin/*.exe
-MySQL Server 9.5/bin/*.dll
-MySQL Server 9.5/lib/*.lib
-MySQL Server 9.5/lib/*.dll
+# MySQL Server files - Tracked by Git LFS
+# Các file lớn được quản lý bởi Git LFS, không cần ignore
+# Git LFS sẽ tự động xử lý các file .exe, .dll, .lib trong bin và lib
 
 # MySQL data files
 data/**/*
