@@ -29,19 +29,13 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 
 ## 📋 Yêu cầu
 
-### Để chạy trực tiếp từ source code:
-- Python 3.8 trở lên
-- `ttkbootstrap` (tự động cài qua `requirements.txt`)
-
-### Để chạy từ .exe (khuyến nghị):
 - Windows 10/11
 - **KHÔNG CẦN** cài Python hay bất kỳ thứ gì khác!
+- Chỉ cần tải và chạy file `.exe`
 
 ---
 
-## 🎯 Hướng dẫn cho người dùng lần đầu
-
-### Cách 1: Chạy từ .exe (Dễ nhất) ⭐
+## 🎯 Hướng dẫn sử dụng
 
 1. **Tải và giải nén** thư mục `final` (từ release hoặc `package_final.bat`)
 
@@ -78,25 +72,6 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
      - **Username:** `root`
      - **Password:** *(để trống)*
 
-### Cách 2: Chạy từ source code
-
-1. **Clone hoặc download** dự án:
-   ```bash
-   git clone https://github.com/thanhtuanxzx/open-mysql.git
-   cd open-mysql
-   ```
-
-2. **Cài đặt dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Chạy ứng dụng**:
-   ```bash
-   python app.py
-   ```
-
-4. **Setup lần đầu** (giống Cách 1, bước 5)
 
 ---
 
@@ -153,32 +128,6 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 
 ---
 
-## 🛠️ Build từ source code
-
-### Build .exe:
-
-```bash
-build_exe.bat
-```
-
-File `.exe` sẽ được tạo tại: `dist\MySQL_Manager.exe`
-
-### Tạo thư mục final portable:
-
-```bash
-package_final.bat
-```
-
-Thư mục `final\` sẽ chứa:
-- `MySQL_Manager.exe`
-- MySQL Server 9.5
-- phpMyAdmin
-- PHP Portable
-- Config files
-
-**Copy thư mục `final\` sang máy khác là chạy được ngay!**
-
----
 
 ## ❓ Troubleshooting
 
