@@ -1,0 +1,19 @@
+{
+  "mysql": {
+    "port": 3306,
+    "data_dir": "data",
+    "basedir": "MySQL Server 9.5",
+    "my_ini_path": "MySQL Server 9.5/my.ini"
+  },
+  "php": {
+    "port": 8080,
+    "php_dir": "php",
+    "php_exe_path": "php/php.exe"
+  },
+  "phpmyadmin": {
+    "dir": "phpMyAdmin-5.2.3-all-languages",
+    "config_path": "phpMyAdmin-5.2.3-all-languages/config.inc.php"
+  },
+  "theme": "dark",
+  "last_php_path": ""
+}

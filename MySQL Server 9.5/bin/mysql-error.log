@@ -1,0 +1,12 @@
+2025-10-29T16:19:56.988453Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2025-10-29T16:19:57.008502Z 0 [System] [MY-013169] [Server] D:\MySQL\MySQL Server 9.5\bin\mysqld.exe (mysqld 9.5.0) initializing of server in progress as process 27548
+2025-10-29T16:19:57.008782Z 0 [ERROR] [MY-010338] [Server] Can't find error-message file 'D:\mysql_portable\share\english\errmsg.sys'. Check error-message file location and 'lc-messages-dir' configuration directive.
+2025-10-29T16:19:57.018302Z 0 [ERROR] [MY-013236] [Server] The designated data directory D:\mysql_portable\data\ is unusable. You can remove all files that the server added to it.
+2025-10-29T16:19:57.024975Z 0 [ERROR] [MY-010119] [Server] Aborting
+2025-10-29T16:19:57.029283Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
+2025-10-29T16:31:07.360907Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2025-10-29T16:31:07.366563Z 0 [System] [MY-013169] [Server] D:\MySQL\MySQL Server 9.5\bin\mysqld.exe (mysqld 9.5.0) initializing of server in progress as process 13112
+2025-10-29T16:31:07.368552Z 0 [ERROR] [MY-010457] [Server] --initialize specified but the data directory has files in it. Aborting.
+2025-10-29T16:31:07.368773Z 0 [ERROR] [MY-013236] [Server] The designated data directory D:\mysql_portable\data\ is unusable. You can remove all files that the server added to it.
+2025-10-29T16:31:07.371056Z 0 [ERROR] [MY-010119] [Server] Aborting
+2025-10-29T16:31:07.371567Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
