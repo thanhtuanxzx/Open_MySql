@@ -14,6 +14,6 @@
     "dir": "phpMyAdmin-5.2.3-all-languages",
     "config_path": "phpMyAdmin-5.2.3-all-languages/config.inc.php"
   },
-  "theme": "light",
+  "theme": "dark",
   "last_php_path": ""
 }
