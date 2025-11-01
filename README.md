@@ -7,6 +7,10 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 ![Version](https://img.shields.io/badge/version-2.0-blue)
 ![Python](https://img.shields.io/badge/python-3.8+-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
+![Open Source](https://img.shields.io/badge/open--source-yes-green)
+![Non Commercial](https://img.shields.io/badge/non--commercial-yes-orange)
+
+> **⚠️ Lưu ý pháp lý:** Dự án này là mã nguồn mở, miễn phí, dùng cho mục đích giáo dục và cá nhân. Bao gồm MySQL Server (GPLv2 - Oracle), phpMyAdmin (GPLv2), và PHP (PHP License). Xem [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ---
 
@@ -19,6 +23,7 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 - ✅ Log panel với scroll
 - ✅ Cấu hình ports linh hoạt
 - ✅ **100% Portable** - Copy và chạy, không cần cài đặt
+- ✅ **Mã nguồn mở** - MIT License, miễn phí cho mục đích giáo dục
 
 ---
 
@@ -247,7 +252,46 @@ Mọi đóng góp đều được chào đón!
 
 ## 📝 License
 
-MIT License - Xem file LICENSE để biết thêm chi tiết.
+**Open MySQL Manager** được phân phối dưới giấy phép MIT License.
+
+**⚠️ LƯU Ý QUAN TRỌNG VỀ BẢN QUYỀN:**
+
+Dự án này bao gồm các phần mềm của bên thứ ba với giấy phép riêng:
+
+- **MySQL Server 9.5 (Community Edition)**: 
+  - Copyright (c) 1997-2025, Oracle and/or its affiliates
+  - Giấy phép: GNU General Public License version 2 (GPLv2)
+  - Nguồn: https://www.mysql.com/downloads/
+
+- **phpMyAdmin 5.2.3**: 
+  - Copyright (c) The phpMyAdmin devel team
+  - Giấy phép: GNU General Public License version 2 (GPLv2)
+  - Nguồn: https://www.phpmyadmin.net/
+
+- **PHP (Portable Edition)**: 
+  - Copyright (c) The PHP Group
+  - Giấy phép: PHP License version 3.01
+  - Nguồn: https://www.php.net/
+
+### Sử dụng và Phân phối:
+
+✅ **Được phép:**
+- Sử dụng cho mục đích giáo dục, học tập, phát triển cá nhân
+- Phân phối mã nguồn của Open MySQL Manager (MIT License)
+- Sử dụng mã nguồn mở, không thương mại
+
+⚠️ **Cần lưu ý:**
+- Sử dụng thương mại có thể yêu cầu giấy phép riêng từ Oracle Corporation (cho MySQL)
+- Khi phân phối lại, phải tuân thủ GPLv2 cho MySQL và phpMyAdmin
+- Phải bao gồm tất cả các file giấy phép gốc
+
+📄 **Xem file [LICENSE](LICENSE) để biết thông tin chi tiết về giấy phép và các disclaimer pháp lý.**
+
+---
+
+**Tuyên bố miễn trừ trách nhiệm:**
+
+Dự án này là phần mềm mã nguồn mở, được cung cấp "như là" (as is), không có bảo hành. Tác giả không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng phần mềm này. Người dùng tự chịu trách nhiệm tuân thủ tất cả các giấy phép và quy định pháp lý liên quan đến các phần mềm của bên thứ ba được bao gồm trong phân phối này.
 
 ---
 

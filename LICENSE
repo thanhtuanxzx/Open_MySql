@@ -1,0 +1,96 @@
+MIT License
+
+Copyright (c) 2025 thanhtuanxzx
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+
+This project includes third-party software components that are subject to
+separate license terms. The Open MySQL Manager application itself is licensed
+under MIT License above. However, this distribution includes:
+
+1. MySQL Server 9.5 (Community Edition)
+   - Copyright (c) 1997-2025, Oracle and/or its affiliates
+   - Licensed under GNU General Public License version 2 (GPLv2)
+   - Source code and license: https://www.mysql.com/downloads/
+   - The MySQL software is provided "as is" without warranty of any kind.
+
+2. phpMyAdmin 5.2.3
+   - Copyright (c) The phpMyAdmin devel team
+   - Licensed under GNU General Public License version 2 (GPLv2)
+   - Source code and license: https://www.phpmyadmin.net/
+   - phpMyAdmin is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License version 2.
+
+3. PHP (Portable Edition)
+   - Copyright (c) The PHP Group
+   - Licensed under PHP License version 3.01
+   - Source code and license: https://www.php.net/license/
+
+These third-party components are distributed in this package for convenience
+only. Their respective licenses apply independently to each component. Users
+must comply with the license terms of each third-party component when using
+this software.
+
+For complete license information, please refer to:
+- MySQL: MySQL Server 9.5/LICENSE
+- phpMyAdmin: phpMyAdmin-5.2.3-all-languages/LICENSE
+- PHP: php/license.txt
+
+---
+
+IMPORTANT LEGAL NOTICES
+
+1. NON-COMMERCIAL USE ONLY
+   This software package is distributed for educational and personal use only.
+   Commercial use of this package may require separate licensing agreements
+   with Oracle Corporation (for MySQL), The phpMyAdmin devel team (for
+   phpMyAdmin), and The PHP Group (for PHP).
+
+2. NO WARRANTY
+   The Open MySQL Manager application is provided "as is" without any warranty.
+   Third-party components included in this distribution are provided "as is"
+   by their respective copyright holders without any warranty.
+
+3. NO LIABILITY
+   In no event shall the authors or copyright holders be liable for any
+   damages arising from the use or inability to use this software.
+
+4. SEPARATE LICENSES
+   This distribution combines multiple software components with different
+   licenses. Users must ensure compliance with all applicable licenses.
+
+5. REDISTRIBUTION
+   When redistributing this software, you must:
+   - Include all copyright notices and license files
+   - Maintain all third-party license files intact
+   - Comply with GPLv2 requirements if distributing MySQL/phpMyAdmin
+   - Comply with MIT License requirements for Open MySQL Manager code
+
+---
+
+For questions or concerns regarding licensing, please contact:
+- Open MySQL Manager: tuanzingm@gmail.com
+- MySQL Licensing: https://www.mysql.com/about/legal/licensing/
+- phpMyAdmin: https://www.phpmyadmin.net/team/
+- PHP: https://www.php.net/support.php
+

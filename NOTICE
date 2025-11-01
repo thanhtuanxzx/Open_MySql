@@ -1,0 +1,41 @@
+NOTICE
+
+Open MySQL Manager - Third-Party Software Acknowledgments
+
+Copyright (c) 2025 thanhtuanxzx
+
+This software includes the following third-party components:
+
+1. MySQL Server 9.5 (Community Edition)
+   Copyright (c) 1997-2025, Oracle and/or its affiliates
+   Licensed under GNU General Public License version 2 (GPLv2)
+   Source: https://www.mysql.com/downloads/
+   License file: MySQL Server 9.5/LICENSE
+
+2. phpMyAdmin 5.2.3
+   Copyright (c) The phpMyAdmin devel team
+   Licensed under GNU General Public License version 2 (GPLv2)
+   Source: https://www.phpmyadmin.net/
+   License file: phpMyAdmin-5.2.3-all-languages/LICENSE
+
+3. PHP (Portable Edition)
+   Copyright (c) The PHP Group
+   Licensed under PHP License version 3.01
+   Source: https://www.php.net/
+   License file: php/license.txt
+
+This distribution combines multiple software components with different licenses:
+- Open MySQL Manager application code: MIT License
+- MySQL Server: GPLv2
+- phpMyAdmin: GPLv2
+- PHP: PHP License version 3.01
+
+IMPORTANT:
+- This software is provided for educational and personal use only.
+- Commercial use may require separate licensing agreements with Oracle Corporation
+  (for MySQL), The phpMyAdmin devel team, and The PHP Group.
+- Users must comply with all applicable licenses when using this software.
+- Redistribution must include all original license files and copyright notices.
+
+For complete license information, see LICENSE file in the root directory.
+
