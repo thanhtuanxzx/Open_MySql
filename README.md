@@ -16,62 +16,63 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 
 ## 🚀 Tính năng
 
-- ✅ Giao diện hiện đại với ttkbootstrap
-- ✅ Theme sáng/tối (toggle ở góc phải)
-- ✅ Quản lý MySQL Server, PHP Web Server, phpMyAdmin
-- ✅ Status cards real-time
-- ✅ Log panel với scroll
-- ✅ Cấu hình ports linh hoạt
-- ✅ **100% Portable** - Copy và chạy, không cần cài đặt
-- ✅ **Mã nguồn mở** - MIT License, miễn phí cho mục đích giáo dục
+- ✅ Giao diện hiện đại xây dựng trên `ttkbootstrap`
+- ✅ Theme sáng/tối linh hoạt (Light / Dark mode toggle)
+- ✅ Quản lý đồng bộ: **MySQL Server 9.5**, **PHP Built-in Server**, **phpMyAdmin 5.2.3**
+- ✅ Giám sát trạng thái thời gian thực (Status Cards: Running / Stopped)
+- ✅ Bảng điều khiển Log đa luồng (Thread-safe Logger Panel)
+- ✅ Tùy chỉnh cổng linh hoạt (MySQL default: 3306, HTTP default: 8080)
+- ✅ Tự động khởi tạo và cấu hình `my.ini` và `config.inc.php`
+- ✅ **100% Portable** - Chạy trực tiếp từ mã nguồn Python hoặc file `.exe`, không cần cài đặt vào hệ thống
 
 ---
 
-## 📋 Yêu cầu
+## 📋 Yêu cầu hệ thống
 
-- Windows 10/11
-- **KHÔNG CẦN** cài Python hay bất kỳ thứ gì khác!
-- Chỉ cần tải và chạy file `.exe`
+- Hệ điều hành: Windows 10 / 11 (64-bit)
+- Chạy trực tiếp từ `.exe`: **Không cần cài đặt gì thêm**
+- Chạy từ mã nguồn: Python 3.8+ (khuyến nghị Python 3.10 - 3.13)
 
 ---
 
-## 🎯 Hướng dẫn sử dụng
+## 💻 Hướng dẫn chạy từ mã nguồn Python
 
-1. **Tải và giải nén** thư mục `final` (từ release hoặc `package_final.bat`)
+Nếu bạn là lập trình viên muốn phát triển hoặc tùy biến giao diện:
 
-2. **Mở thư mục `final`**, bạn sẽ thấy:
-   ```
-   final/
-   ├── MySQL_Manager.exe      ← Chạy file này!
-   ├── MySQL Server 9.5/       ← MySQL Server
-   ├── phpMyAdmin-5.2.3-all-languages/  ← phpMyAdmin
-   ├── php/                     ← PHP Portable
-   ├── data/                    ← Database (tự tạo)
-   └── config/                  ← Configuration
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/thanhtuanxzx/Open_MySql.git
+   cd Open_MySql
    ```
 
-3. **Double-click** `MySQL_Manager.exe`
+2. **Cài đặt các thư viện cần thiết:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. **Tab "Chức năng chính"** sẽ mở sẵn, bạn sẽ thấy:
-   - Nút **"Khởi động phpMyAdmin"** → Click để start MySQL + PHP + mở browser
-   - Nút **"Khởi động MySQL Server"** → Chỉ start MySQL
-   - Nút **"Dừng tất cả"** → Stop tất cả services
+3. **Khởi chạy ứng dụng:**
+   ```bash
+   python app.py
+   ```
 
-5. **Lần đầu sử dụng**:
-   - Click nút **"⚙️ Thiết lập ban đầu"** ở góc phải trên
-   - Hoặc vào tab **"Thiết lập"** → Click **"Bắt đầu thiết lập"**
-   - App sẽ tự động cấu hình:
-     - Tạo `my.ini` cho MySQL
-     - Tạo `config.inc.php` cho phpMyAdmin
-     - Thiết lập ports và paths
+---
 
-6. **Sau khi setup xong**:
-   - Click **"Khởi động phpMyAdmin"**
-   - Browser tự động mở: `http://localhost:8080`
-   - Đăng nhập:
-     - **Username:** `root`
-     - **Password:** *(để trống)*
+## 🎯 Hướng dẫn sử dụng Portable (.exe)
 
+1. Tải bản release hoặc mở thư mục dự án `Open_MySql`.
+2. Chạy trực tiếp file `MySQL_Manager.exe`.
+3. **Lần đầu sử dụng**:
+   - Nhấn nút **"⚙️ Thiết lập ban đầu"** (hoặc vào tab **"Thiết lập"** → **"Bắt đầu thiết lập"**).
+   - Ứng dụng sẽ tự động khởi tạo:
+     - Cấu hình MySQL (`MySQL Server 9.5/my.ini`)
+     - Cấu hình phpMyAdmin (`config.inc.php`)
+     - Cổng mạng và các đường dẫn tương ứng
+4. **Khởi động dịch vụ:**
+   - Nhấn **"Khởi động phpMyAdmin"**: Tự động bật MySQL + PHP Web Server và mở trình duyệt tại `http://localhost:8080`.
+   - Đăng nhập mặc định:
+     - **Tài khoản:** `root`
+     - **Mật khẩu:** *(để trống)*
+   - Khi hoàn thành công việc, nhấn **"Dừng tất cả"** để tắt an toàn mọi dịch vụ.
 
 ---
 
@@ -80,193 +81,126 @@ Portable MySQL Server Manager với giao diện hiện đại, dễ sử dụng.
 ### 1. **Chức năng chính** (Tab mặc định)
 - 🟢 **Khởi động phpMyAdmin** - Start MySQL + PHP + mở browser
 - 🔵 **Khởi động MySQL Server** - Chỉ start MySQL
-- 🔴 **Dừng tất cả** - Stop tất cả services
-- 📋 **Log panel** - Xem logs real-time
+- 🔴 **Dừng tất cả** - Dừng tất cả dịch vụ đang chạy
+- 📋 **Log panel** - Xem logs hoạt động thời gian thực
 
 ### 2. **Trạng thái**
-- Status cards cho MySQL Server, PHP Web Server, PHP Portable
-- Xem trạng thái real-time: **Đang chạy** / **Không chạy**
-- Start/Stop từng service riêng lẻ
+- Thẻ giám sát trạng thái chi tiết của từng dịch vụ: MySQL Server, PHP Web Server
+- Cho phép Bật / Tắt riêng lẻ từng thành phần
 
 ### 3. **Thiết lập**
-- ⚙️ **Bắt đầu thiết lập** - Auto-config (dùng lần đầu)
-- 🔧 **Sửa lỗi đăng nhập** - Fix login issues
+- ⚙️ **Bắt đầu thiết lập** - Tự động thiết lập cấu hình ban đầu
+- 🔐 **Sửa lỗi đăng nhập** - Khôi phục cấu hình xác thực phpMyAdmin
 - 🔌 **Cấu hình ports**:
-  - MySQL Port (mặc định: 3306)
-  - HTTP Port (mặc định: 8080)
-- 📁 **Thư mục data** - Chọn nơi lưu database
+  - MySQL Port (mặc định: `3306`)
+  - HTTP Port (mặc định: `8080`)
+- 📁 **Chọn thư mục PHP** - Cho phép đổi bản phân phối PHP tùy ý
 
 ### 4. **Log & Trạng thái**
-- Log chi tiết với scroll
-- Nút **"Làm mới trạng thái"** để cập nhật
-
----
-
-## 🔧 Cấu hình
-
-### File cấu hình: `config/config.json`
-
-```json
-{
-  "theme": "light",
-  "mysql": {
-    "port": 3306,
-    "data_dir": "data"
-  },
-  "php": {
-    "http_port": 8080,
-    "path": "php"
-  },
-  "phpmyadmin": {
-    "path": "phpMyAdmin-5.2.3-all-languages"
-  }
-}
-```
-
-### Thay đổi theme:
-- Click nút **🌓** ở góc phải trên để toggle sáng/tối
-
----
-
-
-## ❓ Troubleshooting
-
-### 1. "Port đã được sử dụng"
-- **Giải pháp:** Vào tab **"Thiết lập"** → Đổi port MySQL (3306) hoặc HTTP (8080)
-
-### 2. "Không tìm thấy MySQL Server"
-- **Giải pháp:** Đảm bảo thư mục `MySQL Server 9.5` nằm cùng cấp với `MySQL_Manager.exe`
-
-### 3. "Lỗi đăng nhập phpMyAdmin"
-- **Giải pháp:** Tab **"Thiết lập"** → Click **"Sửa lỗi đăng nhập"**
-
-### 4. "Windows Defender cảnh báo"
-- **Giải pháp:** Đây là false positive. Thêm vào exception hoặc tắt Defender tạm thời.
-
-### 5. MySQL không start được
-- **Giải pháp:** 
-  - Kiểm tra port 3306 có đang được dùng không
-  - Xóa thư mục `data` và chạy setup lại
-  - Xem log trong tab **"Log & Trạng thái"**
+- Hiển thị đầy đủ lịch sử hoạt động hệ thống kèm chức năng cuộn
+- Nút **"🔄 Làm mới trạng thái"** cập nhật tức thì trạng thái cổng
 
 ---
 
 ## 📁 Cấu trúc dự án
 
-```
-open-mysql/
-├── app.py                      # Main application
-├── services/                   # Service management
-│   ├── service_controller.py  # MySQL/PHP controllers
-│   └── config_manager.py      # Config management
-├── ui/                         # UI components
-│   ├── app_bar.py             # Top bar
-│   ├── components.py          # Reusable widgets
-│   ├── logger_panel.py        # Log display
-│   └── style_manager.py       # Theme/styles
-├── config/                     # Configuration files
-│   ├── default.json           # Default config
-│   └── config.json            # User config
-├── build_exe.bat              # Build script
-├── package_final.bat          # Package script
-├── requirements.txt            # Python dependencies
-└── README.md                  # This file
+```text
+Open_MySql/
+├── app.py                      # Điểm vào chính của ứng dụng (GUI Tkinter)
+├── services/                   # Quản lý dịch vụ & cấu hình ngầm
+│   ├── __init__.py
+│   ├── config_manager.py       # Quản lý đọc/ghi cấu hình JSON
+│   └── service_controller.py   # Điều khiển tiến trình MySQL, PHP, check port
+├── ui/                         # Các thành phần giao diện
+│   ├── __init__.py
+│   ├── app_bar.py              # Thanh tiêu đề, nút thu nhỏ / đóng
+│   ├── components.py           # Thẻ trạng thái (StatusCard), nút bấm (ActionButton)
+│   ├── logger_panel.py         # Khung hiển thị Log đa luồng
+│   └── style_manager.py        # Quản lý theme Light / Dark
+├── MySQL Server 9.5/           # Máy chủ MySQL Server Portable
+├── php/                        # Môi trường chạy PHP Portable
+├── phpMyAdmin-5.2.3-.../       # Giao diện web quản trị cơ sở dữ liệu
+├── data/                       # Thư mục lưu trữ database của MySQL
+├── requirements.txt            # Danh sách thư viện Python phụ thuộc
+├── MySQL_Manager.exe           # Bản thực thi đóng gói sẵn
+├── .gitignore                  # Cấu hình bỏ qua file runtime/cache cho Git
+└── README.md                   # Tài liệu hướng dẫn này
 ```
 
 ---
 
-## 🎨 Screenshots
+## 🔧 Cấu hình: `config/config.json`
 
-### Light Theme
-- Giao diện sáng, dễ nhìn
-- Status cards với màu sắc rõ ràng
+File cấu hình được sinh tự động khi chạy ứng dụng:
 
-### Dark Theme
-- Giao diện tối, bảo vệ mắt
-- Toggle bằng nút 🌓
+```json
+{
+  "mysql": {
+    "port": 3306,
+    "data_dir": "data",
+    "basedir": "MySQL Server 9.5",
+    "my_ini_path": "MySQL Server 9.5/my.ini"
+  },
+  "php": {
+    "port": 8080,
+    "php_dir": "php",
+    "php_exe_path": "php/php.exe"
+  },
+  "phpmyadmin": {
+    "dir": "phpMyAdmin-5.2.3-all-languages",
+    "config_path": "phpMyAdmin-5.2.3-all-languages/config.inc.php"
+  },
+  "theme": "light",
+  "last_php_path": ""
+}
+```
+
+---
+
+## ❓ Xử lý sự cố thường gặp (Troubleshooting)
+
+### 1. "Port đã được sử dụng (Port already in use)"
+- **Cách khắc phục:** Vào tab **"Thiết lập"** → Đổi port MySQL khác `3306` (ví dụ `3307`) hoặc HTTP khác `8080` (ví dụ `8088`).
+
+### 2. "Lỗi đăng nhập phpMyAdmin"
+- **Cách khắc phục:** Vào tab **"Thiết lập"** → Nhấn nút **"🔐 Sửa lỗi đăng nhập"** để tạo lại cấu hình cookie authentication.
+
+### 3. "MySQL Server không khởi động được"
+- **Cách khắc phục:**
+  - Kiểm tra xem có instance `mysqld.exe` nào đang chạy ngầm bằng Task Manager.
+  - Kiểm tra xem file log lỗi tại `data/mysql-error.log`.
 
 ---
 
 ## 🤝 Đóng góp
 
-Mọi đóng góp đều được chào đón! 
+Mọi đóng góp nhằm cải thiện phần mềm đều được chào đón! 
 
 1. Fork dự án
-2. Tạo branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+2. Tạo nhánh tính năng (`git checkout -b feature/AmazingFeature`)
+3. Commit thay đổi (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push lên nhánh của bạn (`git push origin feature/AmazingFeature`)
+5. Mở một Pull Request
 
 ---
 
-## 📝 License
+## 📝 Bản quyền & Giấy phép
 
-**Open MySQL Manager** được phân phối dưới giấy phép MIT License.
+**Open MySQL Manager** được phân phối theo giấy phép **MIT License**.
 
-**⚠️ LƯU Ý QUAN TRỌNG VỀ BẢN QUYỀN:**
+- **MySQL Server 9.5 (Community Edition)**: Oracle Corporation (GPLv2)
+- **phpMyAdmin 5.2.3**: phpMyAdmin devel team (GPLv2)
+- **PHP**: The PHP Group (PHP License 3.01)
 
-Dự án này bao gồm các phần mềm của bên thứ ba với giấy phép riêng:
-
-- **MySQL Server 9.5 (Community Edition)**: 
-  - Copyright (c) 1997-2025, Oracle and/or its affiliates
-  - Giấy phép: GNU General Public License version 2 (GPLv2)
-  - Nguồn: https://www.mysql.com/downloads/
-
-- **phpMyAdmin 5.2.3**: 
-  - Copyright (c) The phpMyAdmin devel team
-  - Giấy phép: GNU General Public License version 2 (GPLv2)
-  - Nguồn: https://www.phpmyadmin.net/
-
-- **PHP (Portable Edition)**: 
-  - Copyright (c) The PHP Group
-  - Giấy phép: PHP License version 3.01
-  - Nguồn: https://www.php.net/
-
-### Sử dụng và Phân phối:
-
-✅ **Được phép:**
-- Sử dụng cho mục đích giáo dục, học tập, phát triển cá nhân
-- Phân phối mã nguồn của Open MySQL Manager (MIT License)
-- Sử dụng mã nguồn mở, không thương mại
-
-⚠️ **Cần lưu ý:**
-- Sử dụng thương mại có thể yêu cầu giấy phép riêng từ Oracle Corporation (cho MySQL)
-- Khi phân phối lại, phải tuân thủ GPLv2 cho MySQL và phpMyAdmin
-- Phải bao gồm tất cả các file giấy phép gốc
-
-📄 **Xem file [LICENSE](LICENSE) để biết thông tin chi tiết về giấy phép và các disclaimer pháp lý.**
+Xem chi tiết trong file [LICENSE](LICENSE).
 
 ---
 
-**Tuyên bố miễn trừ trách nhiệm:**
-
-Dự án này là phần mềm mã nguồn mở, được cung cấp "như là" (as is), không có bảo hành. Tác giả không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng phần mềm này. Người dùng tự chịu trách nhiệm tuân thủ tất cả các giấy phép và quy định pháp lý liên quan đến các phần mềm của bên thứ ba được bao gồm trong phân phối này.
-
----
-
-## 👤 Author
+## 👤 Tác giả
 
 **thanhtuanxzx**
-
 - GitHub: [@thanhtuanxzx](https://github.com/thanhtuanxzx)
 - Email: tuanzingm@gmail.com
+- Repository: [thanhtuanxzx/Open_MySql](https://github.com/thanhtuanxzx/Open_MySql)
 
----
-
-## ⭐ Star History
-
-Nếu dự án này hữu ích, hãy cho một ⭐ trên GitHub!
-
----
-
-## 📞 Support
-
-Nếu gặp vấn đề:
-1. Xem phần [Troubleshooting](#-troubleshooting)
-2. Tạo [Issue](https://github.com/thanhtuanxzx/open-mysql/issues)
-3. Email: tuanzingm@gmail.com
-
----
-
-**Made with ❤️ by thanhtuanxzx**
-
+⭐ **Nếu thấy dự án hữu ích, đừng quên tặng repo một Star trên GitHub nhé!**
