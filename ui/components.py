@@ -23,7 +23,7 @@ Args:
     on_stop: Callback for stop button
     status: Initial status
 '''
-        super().__init__(parent, style = 16, padding = 'Card.TFrame', **kwargs)
+        super().__init__(parent, style = 'Card.TFrame', padding = 16, **kwargs)
         self.title = title
         self.style_manager = style_manager
         self.on_start = on_start
@@ -116,6 +116,6 @@ Args:
         style_name = f'''ActionButton{size.capitalize()}.TButton'''
         kwargs.pop('font', None)
         kwargs.pop('padding', None)
-        super().__init__(parent, text = style_name, command = bootstyle, bootstyle = command, style = text, **kwargs)
+        super().__init__(parent, text = text, command = command, bootstyle = bootstyle, style = style_name, **kwargs)
 
 
