@@ -54,6 +54,12 @@ Nếu bạn là lập trình viên muốn phát triển hoặc tùy biến giao 
    ```bash
    python app.py
    ```
+   *Hoặc click đúp trực tiếp vào file `run.bat`.*
+
+4. **Đóng gói lại thành file `.exe`:**
+   ```bash
+   build_exe.bat
+   ```
 
 ---
 

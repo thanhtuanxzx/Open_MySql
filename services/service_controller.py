@@ -149,25 +149,15 @@ Args:
                 self.update_my_ini()
                 self.mysql_process = subprocess.Popen([
                     str(self.mysql_exe),
-                    f'''--defaults-file={self.my_ini}'''], cwd = str(self.mysql_bin), stdout = subprocess.PIPE, stderr = subprocess.PIPE, creationflags = subprocess.CREATE_NO_WINDOW if platform.system() == 'Windows' else 0)
+                    f'''--defaults-file={self.my_ini}'''], cwd = str(self.mysql_bin), stdout = subprocess.DEVNULL, stderr = subprocess.DEVNULL, creationflags = subprocess.CREATE_NO_WINDOW if platform.system() == 'Windows' else 0)
                 max_wait_seconds = 30
                 check_interval = 0.5
                 max_iterations = int(max_wait_seconds / check_interval)
                 for i in range(max_iterations):
                     time.sleep(check_interval)
-                    if self.mysql_process.poll() is None:
-                        error_msg = 'Process exited unexpectedly'
-                        
-                        try:
-                            if self.mysql_process.stderr:
-                                stderr_output = self.mysql_process.stderr.read().decode('utf-8', errors = 'ignore')
-                                if stderr_output:
-                                    error_msg = f'''Process exited: {stderr_output[:300]}'''
-                        except:
-                            returncode = self.mysql_process.returncode
-                            if returncode:
-                                error_msg = f'''Process exited with code {returncode}'''
-
+                    if self.mysql_process.poll() is not None:
+                        returncode = self.mysql_process.returncode
+                        error_msg = f'''Process exited with code {returncode}''' if returncode else 'Process exited unexpectedly'
                         self.log(error_msg, 'ERROR')
                         self.mysql_status = ServiceStatus.ERROR
                         if self.status_callback:
@@ -308,7 +298,7 @@ Args:
                         php_cmd,
                         '-S',
                         f'''localhost:{self.php_port}''',
-                        str(router_script)], cwd = str(self.base_dir), stdout = subprocess.PIPE, stderr = subprocess.PIPE, creationflags = subprocess.CREATE_NO_WINDOW if platform.system() == 'Windows' else 0)
+                        str(router_script)], cwd = str(self.base_dir), stdout = subprocess.DEVNULL, stderr = subprocess.DEVNULL, creationflags = subprocess.CREATE_NO_WINDOW if platform.system() == 'Windows' else 0)
                     os.chdir(original_cwd)
                 except Exception as e:
                     os.chdir(original_cwd)
@@ -319,21 +309,10 @@ Args:
                 server_started = False
                 for i in range(max_checks):
                     time.sleep(check_interval)
-                    if self.php_process.poll() is None:
-                        error_msg = 'Process exited unexpectedly'
-                        
-                        try:
-                            if self.php_process.stderr:
-                                stderr_output = self.php_process.stderr.read().decode('utf-8', errors = 'ignore')
-                                if stderr_output:
-                                    error_msg = f'''PHP error: {stderr_output[:200]}'''
-                                    self.log(error_msg, 'ERROR')
-                        except:
-                            returncode = self.php_process.returncode
-                            if returncode:
-                                error_msg = f'''Process exited with code {returncode}'''
-                                self.log(error_msg, 'ERROR')
-
+                    if self.php_process.poll() is not None:
+                        returncode = self.php_process.returncode
+                        error_msg = f'''PHP process exited with code {returncode}''' if returncode else 'PHP process exited unexpectedly'
+                        self.log(error_msg, 'ERROR')
                         break
                     if self.check_port_listening(self.php_port):
                         server_started = True
@@ -347,15 +326,6 @@ Args:
                     return None
                 self.php_status = ServiceStatus.ERROR
                 error_msg = 'PHP Web Server start failed'
-                
-                try:
-                    if self.php_process.stderr:
-                        stderr_output = self.php_process.stderr.read().decode('utf-8', errors = 'ignore')
-                        if stderr_output:
-                            error_msg = f'''PHP Web Server failed: {stderr_output[:200]}'''
-                except:
-                    pass
-
                 self.log(error_msg, 'ERROR')
                 if self.status_callback:
                     self.status_callback('php', ServiceStatus.ERROR)
