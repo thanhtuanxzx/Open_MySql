@@ -1,0 +1,71 @@
+# ==========================================
+# Open MySQL - .gitignore
+# ==========================================
+
+# --- MySQL Runtime & Logs ---
+data/binlog.*
+data/*.err
+data/*.pid
+data/*.log
+data/ibtmp1
+data/#innodb_redo/
+data/#innodb_temp/
+
+# Ignore all user-created databases in data/, keep only system databases
+data/*/
+!data/mysql/
+!data/performance_schema/
+!data/sys/
+
+# --- Web Server & User Projects ---
+# Ignore user web project folders in htdocs
+htdocs/*/
+!htdocs/.gitkeep
+
+# Archives & Uploads
+*.zip
+*.rar
+*.tar.gz
+*.tgz
+*.7z
+*.tar
+
+# --- phpMyAdmin & PHP Cache / Temp ---
+phpMyAdmin-5.2.3-all-languages/config.inc.php
+phpMyAdmin-5.2.3-all-languages/tmp/*
+!phpMyAdmin-5.2.3-all-languages/tmp/.gitkeep
+php/tmp/*
+!php/tmp/.gitkeep
+
+# --- Logs & Temp ---
+*.log
+*.tmp
+*.bak
+
+# --- OS Generated Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# --- IDE & Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# --- Python Build & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+/*.spec
+/build/
+/dist/
+.env
+.venv
+/env/
+/venv/
